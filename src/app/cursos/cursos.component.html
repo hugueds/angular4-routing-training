@@ -1,0 +1,12 @@
+<p>
+LISTA DE CURSOS
+</p>
+
+<h2>PAGINA {{ page }}</h2>
+
+<ul>
+  <li *ngFor='let c of cursos'><a [routerLink]='["/curso", c.id]'>{{ c.name }}</a></li>
+</ul>
+
+<button md-fab (click)='previousPage()' >PREVIOUS</button>
+<button md-fab (click)='nextPage()'>NEXT</button>

@@ -1,3 +1,14 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar>
+
+  <button md-button routerLinkActive='active'> <a routerLink=''> HOME </a>  </button>
+  <button md-button routerLinkActive='active'> <a routerLink='login'>LOGIN</a>  </button>
+  <button md-button routerLinkActive='active'> <a routerLink='cursos' [queryParams]='{page : 1}' >CURSOS</a>  </button>  
+  <button md-button routerLinkActive='active'> <a [routerLink]='["curso", idCurso.value]'>CURSO COM DETALHE</a>  </button>  
+  
+</md-toolbar>
+
+<router-outlet></router-outlet>
+
+<p>Detalhe do curso</p>
+
+<input type='text '#idCurso />
