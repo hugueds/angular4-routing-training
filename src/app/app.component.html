@@ -1,9 +1,10 @@
-<md-toolbar>
+<md-toolbar *ngIf='showMenu'>
 
   <button md-button routerLinkActive='active'> <a routerLink=''> HOME </a>  </button>
   <button md-button routerLinkActive='active'> <a routerLink='login'>LOGIN</a>  </button>
   <button md-button routerLinkActive='active'> <a routerLink='cursos' [queryParams]='{page : 1}' >CURSOS</a>  </button>  
-  <button md-button routerLinkActive='active'> <a [routerLink]='["curso", idCurso.value]'>CURSO COM DETALHE</a>  </button>  
+  <button md-button routerLinkActive='active'> <a [routerLink]='["cursos", idCurso.value]'>CURSO COM DETALHE</a>  </button>  
+  <button md-button routerLinkActive='active'> <a routerLink='alunos'>ALUNOS</a>  </button>  
   
 </md-toolbar>
 

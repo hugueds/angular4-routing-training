@@ -1,0 +1,9 @@
+<p>
+  Lista de Alunos
+</p>
+
+<ul>
+  <li *ngFor='let a of alunos' > <a [routerLink]='[a.id]'> {{ a.name }}</a>  </li>
+</ul>
+
+<router-outlet></router-outlet>

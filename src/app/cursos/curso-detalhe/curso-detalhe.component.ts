@@ -1,4 +1,4 @@
-import { CursosService } from './../shared/cursos.service';
+import { CursosService } from 'app/shared/cursos.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
 import { Subscription } from "rxjs/Subscription";
@@ -27,9 +27,10 @@ export class CursoDetalheComponent implements OnInit {
     })
 
     this.curso = this._cursosService.getCurso(parseInt(this.id));
+    
 
     if (this.curso == null){
-       this.router.navigate(['/notFound']);
+       this.router.navigate(['cursos/notFound']);       
     }
 
   }
